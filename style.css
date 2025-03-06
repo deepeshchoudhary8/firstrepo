@@ -1,0 +1,48 @@
+body {
+    /* Vibrant rainbow gradient */
+    background: linear-gradient(45deg, #ff6b6b, #feca57, #1dd1a1, #48dbfb, #ff9ff3);
+    /* Ensure the gradient repeats and animates */
+    background-size: 200% 200%;
+    animation: rainbow 15s ease infinite;
+}
+
+/* Animation keyframes for body background */
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+p {
+    /* Bright semi-transparent background with colorful pattern */
+    background-color: rgba(255, 255, 255, 0.7);
+    background-image: radial-gradient(circle, #ff9ff3 20%, #feca57 20%, #feca57 40%, transparent 40%),
+                     radial-gradient(circle, #1dd1a1 20%, #48dbfb 20%, #48dbfb 40%, transparent 40%);
+    background-size: 30px 30px, 40px 40px;
+    background-position: 0 0, 15px 15px;
+    padding: 20px;
+    border-radius: 12px;
+    /* Optional: Add a colorful border */
+    border: 2px solid #ff6b6b;
+}
+
+h1 {
+    /* Bold, multi-color gradient */
+    background: linear-gradient(to right, #ff6b6b, #feca57, #1dd1a1);
+    /* Text color to contrast */
+    color: #ffffff;
+    padding: 15px 25px;
+    border-radius: 10px;
+    /* Add a fun pattern overlay */
+    background-image: linear-gradient(to right, #ff6b6b, #feca57, #1dd1a1),
+                     url('data:image/svg+xml,%3Csvg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23ffffff" fill-opacity="0.2"%3E%3Ccircle cx="10" cy="10" r="2"/%3E%3C/g%3E%3C/svg%3E');
+    /* Slight animation for extra pop */
+    animation: pulse 2s infinite;
+}
+
+/* Animation keyframes for h1 */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
